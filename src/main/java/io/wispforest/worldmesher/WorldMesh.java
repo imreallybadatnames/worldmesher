@@ -414,7 +414,7 @@ public class WorldMesh {
         var entities = HashMultimap.<Vec3d, DynamicRenderInfo.EntityEntry>create();
         for (var entityEntry : entitiesList) {
             entities.put(
-                    entityEntry.entity().getPos().subtract(this.from.getX(), this.from.getY(), this.from.getZ()),
+                    entityEntry.entity().getSyncedPos().subtract(this.from.getX(), this.from.getY(), this.from.getZ()),
                     entityEntry
             );
         }
